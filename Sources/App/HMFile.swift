@@ -83,7 +83,7 @@ public final class HMFile {
             for content in contents {
                 do {
                     let fullPath = path + "/" + content
-                    let fileAttributes = try fileManager.attributesOfFileSystem(forPath: fullPath)
+                    let fileAttributes = try fileManager.attributesOfItem(atPath: fullPath)
                     folderSize += fileAttributes[FileAttributeKey.size] as? Int64 ?? 0
 
                 } catch {
